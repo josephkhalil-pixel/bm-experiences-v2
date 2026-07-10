@@ -1,0 +1,1120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Western Sydney Winterfest | Bossman Experiences</title>
+<meta name="description" content="Bossman Experiences presents Western Sydney Winterfest at Richmond Raceclub, a winter carnival with 25+ food vendors, carnival rides, side games, showbags, free kids activities and live entertainment.">
+<meta name="theme-color" content="#0b0e2e">
+<meta property="og:title" content="Western Sydney Winterfest | Bossman Experiences">
+<meta property="og:description" content="31 July - 2 August at Richmond Raceclub. Free entry, 25+ food vendors, rides, side games, showbags and free kids activities.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="share-richmond-winterfest.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Western Sydney Winterfest | Bossman Experiences">
+<meta name="twitter:description" content="31 July - 2 August at Richmond Raceclub. Free entry, 25+ food vendors, rides, side games, showbags and free kids activities.">
+<meta name="twitter:image" content="share-richmond-winterfest.png">
+
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="shortcut icon" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<style>
+/* ============ RESET + TOKENS ============ */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@500;600;700;800;900&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+:root{
+  --navy:#10143a;
+  --navy-deep:#080a24;
+  --ink:#fff8ec;
+  --muted:rgba(255,248,236,.68);
+  --red:#e0193f;
+  --yellow:#ffd400;
+  --blue:#53c8f2;
+  --black:#0b0b14;
+}
+body{background:var(--navy-deep);color:var(--ink);font-family:Montserrat,sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img{max-width:100%;display:block}
+button{font-family:inherit}
+
+/* ============ SHARED BOUNCE KEYFRAMES ============ */
+@keyframes wiggle{
+  0%,100%{transform:rotate(var(--r,-2deg))}
+  50%{transform:rotate(calc(var(--r,-2deg) * -1))}
+}
+@keyframes popIn{
+  0%{opacity:0;transform:translateY(18px) scale(.9)}
+  60%{opacity:1;transform:translateY(-4px) scale(1.03)}
+  100%{opacity:1;transform:translateY(0) scale(1)}
+}
+@keyframes bounceIn{
+  0%{opacity:0;transform:translateX(28px) scale(.9)}
+  55%{opacity:1;transform:translateX(-4px) scale(1.02)}
+  100%{opacity:1;transform:translateX(0) scale(1)}
+}
+@keyframes floaty{
+  0%,100%{transform:translateY(0) rotate(var(--r,-8deg))}
+  50%{transform:translateY(-8px) rotate(var(--r,-8deg))}
+}
+
+/* ============ MARQUEE TAPE ============ */
+.top-tape{background:var(--red);color:#fff;overflow:hidden;border-bottom:3px solid var(--black);position:relative;z-index:20}
+.top-tape-track{display:flex;width:max-content;animation:tape 26s linear infinite}
+.top-tape span{font-family:Anton,sans-serif;font-size:15px;letter-spacing:.08em;padding:9px 22px;white-space:nowrap;text-transform:uppercase}
+@keyframes tape{to{transform:translateX(-50%)}}
+
+/* ============ NAV ============ */
+.nav{position:sticky;top:0;z-index:200;background:rgba(11,14,42,.92);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,248,236,.14)}
+.nav-inner{max-width:1220px;margin:auto;padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.logo{display:flex;align-items:center;text-decoration:none;transition:transform .25s cubic-bezier(.34,1.56,.64,1)}
+.logo:hover{transform:rotate(-3deg) scale(1.06);filter:drop-shadow(0 10px 14px rgba(83,200,242,.42)) drop-shadow(4px 4px 0 rgba(224,25,63,.65))}
+.logo-full{height:46px;width:auto}
+.logo-mobile-mark{display:none;height:42px;width:auto}
+.nav-links{display:flex;align-items:center;gap:8px}
+.nav-links a{text-decoration:none;text-transform:uppercase;font-size:12px;font-weight:900;letter-spacing:.08em;color:var(--ink);padding:9px 13px;border:2px solid transparent;border-radius:3px;transition:transform .2s cubic-bezier(.34,1.56,.64,1),box-shadow .2s cubic-bezier(.34,1.56,.64,1),background .15s,border-color .15s}
+.nav-links a:hover{background:var(--navy);border-color:var(--ink);transform:translate(-2px,-2px) rotate(-2deg);box-shadow:3px 3px 0 var(--blue)}
+.nav-links .hot{background:var(--yellow);color:var(--black);border-color:var(--black);box-shadow:3px 3px 0 var(--red)}
+.nav-links .hot:hover{background:var(--yellow);color:var(--black);transform:translate(-2px,-2px) rotate(2deg);box-shadow:5px 5px 0 var(--red)}
+
+/* Mobile menu toggle button */
+.nav-toggle{display:none;width:44px;height:40px;border:2px solid var(--ink);background:transparent;align-items:center;justify-content:center;flex-direction:column;gap:5px;cursor:pointer;border-radius:6px;transition:transform .25s cubic-bezier(.34,1.56,.64,1)}
+.nav-toggle span{width:20px;height:2px;background:var(--ink);display:block;border-radius:2px;transition:transform .25s ease,opacity .2s ease}
+.nav-toggle:hover{transform:rotate(-6deg)}
+body.menu-open .nav-toggle span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+body.menu-open .nav-toggle span:nth-child(2){opacity:0;transform:scale(0)}
+body.menu-open .nav-toggle span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu-close{display:none}
+
+/* ============ HERO ============ */
+.hero{position:relative;min-height:calc(100svh - 74px);overflow:hidden;background:
+  radial-gradient(circle at 82% 18%,rgba(83,200,242,.16),transparent 30%),
+  radial-gradient(circle at 15% 82%,rgba(224,25,63,.14),transparent 28%),
+  linear-gradient(135deg,#10143a 0%,#181d55 55%,#080a24 100%);
+  border-bottom:3px solid var(--ink)}
+.hero:before{content:'';position:absolute;inset:0;opacity:.06;background-image:radial-gradient(var(--ink) 1.4px,transparent 1.4px);background-size:26px 26px;mask-image:linear-gradient(to bottom,black,transparent 85%)}
+.hero-inner{max-width:1220px;min-height:calc(100svh - 74px);margin:auto;padding:56px 22px 60px;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(300px,.95fr);gap:44px;align-items:center;position:relative;z-index:2}
+.badge-row{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:22px}
+.scribble-badge{display:inline-flex;background:var(--yellow);color:var(--black);padding:8px 14px;font-size:11px;font-weight:900;letter-spacing:.1em;text-transform:uppercase;border:2px solid var(--black);box-shadow:4px 4px 0 var(--red);animation:badgeWiggle 4.5s ease-in-out infinite;transition:transform .2s cubic-bezier(.34,1.56,.64,1),box-shadow .2s}
+.scribble-badge:hover{transform:translate(-2px,-2px) rotate(-4deg) scale(1.05)!important;box-shadow:6px 6px 0 var(--red);animation-play-state:paused}
+.scribble-badge:nth-child(1){animation-delay:0s}
+.scribble-badge:nth-child(2){background:var(--blue);box-shadow:4px 4px 0 var(--navy);animation-delay:.3s}
+.scribble-badge:nth-child(2):hover{box-shadow:6px 6px 0 var(--navy)}
+.scribble-badge:nth-child(3){background:var(--red);color:#fff;box-shadow:4px 4px 0 var(--yellow);animation-delay:.6s}
+.scribble-badge:nth-child(3):hover{box-shadow:6px 6px 0 var(--yellow)}
+@keyframes badgeWiggle{
+  0%,100%{transform:rotate(-1.8deg)}
+  50%{transform:rotate(1.6deg) translateY(-2px)}
+}
+
+.hero h1{font-family:Anton,sans-serif;font-size:clamp(58px,10.5vw,140px);line-height:.82;letter-spacing:-.02em;text-transform:uppercase;max-width:820px}
+.rotating-hero{min-height:clamp(150px,20vw,260px);display:grid;align-content:center;gap:.06em}
+.good-word{display:block;color:var(--ink)}
+.rotating-words{display:block;position:relative;height:.95em;color:var(--yellow);overflow:hidden}
+.rotating-words span{position:absolute;left:0;top:0;opacity:0;transform:translateY(105%);animation:rotateWords 8s infinite cubic-bezier(.2,1,.2,1)}
+.rotating-words span:nth-child(2){animation-delay:2s}
+.rotating-words span:nth-child(3){animation-delay:4s}
+.rotating-words span:nth-child(4){animation-delay:6s}
+@keyframes rotateWords{
+  0%{opacity:0;transform:translateY(105%)}
+  8%,22%{opacity:1;transform:translateY(0)}
+  30%,100%{opacity:0;transform:translateY(-105%)}
+}
+.hero-copy{margin-top:22px;max-width:580px;color:var(--muted);line-height:1.65;font-size:16px;font-weight:700}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:14px 22px;border:3px solid var(--ink);text-decoration:none;text-transform:uppercase;font-family:Anton,sans-serif;font-size:16px;letter-spacing:.05em;border-radius:4px;transition:transform .22s cubic-bezier(.34,1.56,.64,1),box-shadow .22s cubic-bezier(.34,1.56,.64,1);cursor:pointer}
+.btn.primary{background:var(--ink);color:var(--navy-deep);box-shadow:6px 6px 0 var(--red)}
+.btn.secondary{background:transparent;color:var(--ink);box-shadow:6px 6px 0 rgba(255,248,236,.14)}
+.btn:hover{transform:translate(-3px,-4px) rotate(-1.5deg);box-shadow:9px 10px 0 var(--blue)}
+.btn:active{transform:translate(0,0) rotate(0);box-shadow:2px 2px 0 var(--blue)}
+
+.poster-stack{position:relative;width:100%;display:grid;place-items:center;padding:14px 34px 26px 12px;min-height:0}
+.poster-card{border:4px solid var(--ink);background:var(--navy-deep);overflow:hidden;box-shadow:14px 14px 0 rgba(224,25,63,.75);transition:transform .3s cubic-bezier(.34,1.56,.64,1),box-shadow .3s cubic-bezier(.34,1.56,.64,1)}
+.poster-main{position:relative;width:min(100%,440px);aspect-ratio:var(--flyer-ratio,4/5);transform:rotate(1.2deg)}
+.poster-stack:hover .poster-main{transform:rotate(-.6deg) translateY(-6px);box-shadow:18px 18px 0 rgba(224,25,63,.75)}
+.poster-main img{width:100%;height:100%;object-fit:contain;object-position:center;display:block;background:transparent}
+.mini-note{position:absolute;right:0;top:34px;z-index:3;width:150px;background:var(--yellow);color:var(--black);border:3px solid var(--black);padding:15px;font-weight:900;text-transform:uppercase;box-shadow:8px 8px 0 var(--red);animation:noteFloat 5s ease-in-out infinite}
+.mini-note strong{display:block;font-family:Anton,sans-serif;font-size:40px;line-height:.85}
+@keyframes noteFloat{
+  0%,100%{transform:rotate(6deg) translateY(0)}
+  50%{transform:rotate(9deg) translateY(-8px)}
+}
+.smiley{position:absolute;left:4px;bottom:6px;z-index:3;width:100px;height:100px;border:4px solid var(--blue);border-radius:50%;color:var(--blue);display:grid;place-items:center;font-family:Anton,sans-serif;font-size:40px;background:var(--navy-deep);animation:smileySpin 6s ease-in-out infinite}
+@keyframes smileySpin{
+  0%,100%{transform:rotate(-8deg) scale(1)}
+  50%{transform:rotate(4deg) scale(1.08)}
+}
+
+/* ============ INFO STRIP ============ */
+.info-strip{background:var(--ink);color:var(--black);border-top:3px solid var(--black);border-bottom:3px solid var(--black)}
+.info-grid{max-width:1220px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr)}
+.info-item{padding:22px 20px;border-right:3px solid var(--black);text-align:center;transition:transform .2s cubic-bezier(.34,1.56,.64,1),background .2s}
+.info-item:hover{transform:translateY(-4px) scale(1.03);background:var(--yellow)}
+.info-item:last-child{border-right:0}
+.info-item strong{display:block;font-family:Anton,sans-serif;font-size:38px;line-height:.9}
+.info-item span{display:block;margin-top:6px;font-size:11px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
+
+/* ============ COUNT BAR ============ */
+.count-bar{background:var(--red);color:#fff;border-bottom:3px solid var(--black)}
+.count-inner{max-width:1220px;margin:auto;padding:16px 22px;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.count-text{font-weight:900;text-transform:uppercase;letter-spacing:.04em;font-size:14px}
+.count-text strong{font-family:Anton,sans-serif;font-size:30px;vertical-align:middle;margin-right:4px;color:var(--yellow)}
+.count-actions{display:flex;gap:10px}
+.count-actions button{border:3px solid var(--black);background:var(--ink);color:var(--black);padding:11px 16px;font-family:Anton,sans-serif;font-size:14px;text-transform:uppercase;letter-spacing:.05em;cursor:pointer;box-shadow:4px 4px 0 var(--black);border-radius:2px;transition:transform .2s cubic-bezier(.34,1.56,.64,1),box-shadow .2s cubic-bezier(.34,1.56,.64,1)}
+.count-actions button:hover{transform:translate(-3px,-3px) rotate(-2deg);box-shadow:7px 7px 0 var(--black)}
+.count-actions button.is-counted{background:var(--blue);pointer-events:none}
+
+/* ============ SHARED SECTION STYLES ============ */
+.section{padding:76px 22px}
+.wrap{max-width:1220px;margin:auto}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:32px;flex-wrap:wrap}
+.label{display:inline-block;background:var(--blue);color:var(--black);padding:8px 12px;font-size:11px;font-weight:900;letter-spacing:.13em;text-transform:uppercase;transform:rotate(-1deg);margin-bottom:14px}
+.section h2{font-family:Anton,sans-serif;font-size:clamp(40px,6.4vw,80px);line-height:.86;letter-spacing:-.02em;text-transform:uppercase;max-width:900px}
+.section h2 span{color:var(--yellow)}
+.section-copy{max-width:520px;color:rgba(255,248,236,.66);line-height:1.65;font-weight:700}
+.link-brush{display:inline-flex;text-decoration:none;background:var(--blue);color:var(--black);font-family:Anton,sans-serif;letter-spacing:.06em;text-transform:uppercase;padding:12px 18px;border:3px solid var(--black);box-shadow:5px 5px 0 var(--red);white-space:nowrap;transition:transform .2s cubic-bezier(.34,1.56,.64,1),box-shadow .2s cubic-bezier(.34,1.56,.64,1)}
+.link-brush:hover{transform:translate(-3px,-3px) rotate(-2deg);box-shadow:8px 8px 0 var(--red)}
+
+/* ============ EVENT FEATURE STRIP ============ */
+.event-feature{background:var(--ink);color:var(--black);border-top:3px solid var(--black);border-bottom:3px solid var(--black);padding:40px 22px}
+.event-feature-inner{max-width:1220px;margin:auto}
+.winterfest-card{width:100%;border:3px solid var(--black);background:var(--navy);color:var(--ink);display:grid;grid-template-columns:1fr auto;gap:22px;align-items:end;padding:28px;cursor:pointer;position:relative;overflow:hidden;box-shadow:9px 9px 0 var(--red);transition:transform .22s cubic-bezier(.34,1.56,.64,1),box-shadow .22s cubic-bezier(.34,1.56,.64,1);text-align:left}
+.winterfest-card:hover{transform:translate(-4px,-5px) rotate(-.6deg);box-shadow:14px 15px 0 var(--blue)}
+.winterfest-card:hover .winterfest-arrow{transform:rotate(90deg) scale(1.1)}
+.winterfest-card:before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 78% 18%,rgba(83,200,242,.24),transparent 22%),radial-gradient(circle at 20% 84%,rgba(224,25,63,.18),transparent 28%)}
+.winterfest-card>*{position:relative;z-index:1}
+.winterfest-title{font-family:Anton,sans-serif;font-size:clamp(40px,6.4vw,80px);line-height:.84;text-transform:uppercase;letter-spacing:-.02em}
+.winterfest-title span{color:var(--yellow)}
+.winterfest-meta{margin-top:14px;color:var(--muted);font-size:13px;font-weight:900;text-transform:uppercase;letter-spacing:.05em}
+.winterfest-arrow{width:66px;height:66px;border:3px solid var(--ink);color:var(--black);background:var(--yellow);display:grid;place-items:center;font-family:Anton,sans-serif;font-size:34px;box-shadow:6px 6px 0 var(--red);flex-shrink:0;transition:transform .3s cubic-bezier(.34,1.56,.64,1)}
+
+/* ============ GIVEAWAY ============ */
+.giveaway{background:radial-gradient(circle at 16% 20%,rgba(224,25,63,.2),transparent 22%),radial-gradient(circle at 85% 78%,rgba(83,200,242,.16),transparent 24%),var(--navy-deep)}
+.give-card{border:3px solid var(--ink);padding:32px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;box-shadow:14px 14px 0 var(--red),-10px -10px 0 var(--blue);transition:transform .25s cubic-bezier(.34,1.56,.64,1),box-shadow .25s cubic-bezier(.34,1.56,.64,1)}
+.give-card:hover{transform:translate(-3px,-4px) rotate(-.4deg);box-shadow:18px 18px 0 var(--red),-10px -10px 0 var(--blue)}
+.give-card h2{font-family:Anton,sans-serif;font-size:clamp(42px,7vw,84px);line-height:.84;text-transform:uppercase}
+.give-card h2 span{color:var(--blue)}
+.give-card p{margin-top:14px;color:var(--muted);line-height:1.65;font-weight:800}
+.give-card button{border:3px solid var(--black);background:var(--yellow);color:var(--black);padding:17px 24px;font-family:Anton,sans-serif;font-size:19px;text-transform:uppercase;cursor:pointer;box-shadow:6px 6px 0 var(--red);border-radius:2px;white-space:nowrap;transition:transform .22s cubic-bezier(.34,1.56,.64,1),box-shadow .22s cubic-bezier(.34,1.56,.64,1);animation:btnPulse 2.6s ease-in-out infinite}
+.give-card button:hover{transform:translate(-3px,-4px) rotate(2deg) scale(1.04);box-shadow:9px 10px 0 var(--blue);animation-play-state:paused}
+@keyframes btnPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.035)}}
+
+/* ============ WHAT'S ON ============ */
+.whats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.whats-card{text-align:left;background:var(--ink);color:var(--black);border:3px solid var(--black);padding:22px;cursor:pointer;transition:transform .22s cubic-bezier(.34,1.56,.64,1),box-shadow .22s cubic-bezier(.34,1.56,.64,1);box-shadow:6px 6px 0 rgba(0,0,0,.5)}
+.whats-card:nth-child(3n+1):hover{background:var(--yellow)}
+.whats-card:nth-child(3n+2):hover{background:var(--blue)}
+.whats-card:nth-child(3n+3):hover{background:#ffb8cd}
+.whats-card:hover{transform:translate(-4px,-6px) rotate(-1.2deg);box-shadow:8px 12px 0 var(--red)}
+.whats-card:hover .whats-icon{animation:iconWiggle .5s ease}
+.whats-icon{font-size:34px;display:block;margin-bottom:12px;transition:transform .2s}
+.whats-card strong{font-family:Anton,sans-serif;font-size:22px;text-transform:uppercase;display:block;letter-spacing:-.01em}
+.whats-card small{display:block;margin-top:8px;font-weight:700;color:rgba(17,17,17,.66);line-height:1.5;font-size:13px}
+@keyframes iconWiggle{
+  0%,100%{transform:rotate(0) scale(1)}
+  25%{transform:rotate(-14deg) scale(1.15)}
+  75%{transform:rotate(14deg) scale(1.15)}
+}
+
+/* ============ VENDOR MARQUEE ============ */
+.vendor-lineup-btn{border:3px solid var(--black);background:var(--yellow);color:var(--black);padding:12px 18px;font-family:Anton,sans-serif;text-transform:uppercase;letter-spacing:.05em;cursor:pointer;box-shadow:5px 5px 0 var(--red);border-radius:2px;transition:transform .2s cubic-bezier(.34,1.56,.64,1),box-shadow .2s cubic-bezier(.34,1.56,.64,1)}
+.vendor-lineup-btn:hover{transform:translate(-3px,-3px) rotate(-2deg);box-shadow:8px 8px 0 var(--red)}
+.vendor-marquee{background:var(--navy);border:3px solid var(--black);box-shadow:9px 9px 0 rgba(83,200,242,.35);overflow:hidden;padding:18px 0}
+.vendor-marquee-row{overflow:hidden;margin:6px 0}
+.vendor-marquee-track{display:flex;width:max-content;gap:10px;animation:marquee 34s linear infinite}
+.vendor-marquee-row.reverse .vendor-marquee-track{animation-direction:reverse}
+.vendor-marquee-track span{display:inline-flex;align-items:center;background:var(--ink);color:var(--black);border:2px solid var(--black);padding:10px 18px;font-weight:900;text-transform:uppercase;font-size:13px;white-space:nowrap;box-shadow:4px 4px 0 var(--red);transition:transform .2s cubic-bezier(.34,1.56,.64,1),background .15s,box-shadow .2s}
+.vendor-marquee-track span:hover{background:var(--yellow);transform:translateY(-4px) rotate(-3deg) scale(1.06);box-shadow:5px 8px 0 var(--red)}
+@keyframes marquee{to{transform:translateX(-50%)}}
+
+/* ============ FIND US ============ */
+.find-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:20px}
+.find-card{background:var(--ink);color:var(--black);border:3px solid var(--black);padding:20px;text-decoration:none;display:block;box-shadow:5px 5px 0 rgba(0,0,0,.4);cursor:pointer;text-align:left;font-family:inherit;transition:transform .2s cubic-bezier(.34,1.56,.64,1),box-shadow .2s cubic-bezier(.34,1.56,.64,1)}
+.find-card:hover{transform:translate(-3px,-4px) rotate(-1deg);box-shadow:8px 9px 0 var(--red)}
+.find-card strong{display:block;font-family:Anton,sans-serif;font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--red);margin-bottom:6px}
+.find-card span{font-weight:800;font-size:14px;line-height:1.4;display:block}
+.map-box{min-height:340px;border:3px solid var(--ink);overflow:hidden;background:var(--navy-deep);margin-bottom:18px}
+.map-box iframe{width:100%;height:340px;display:block;border:0}
+.transport-panel{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.transport-card{background:var(--navy);color:var(--ink);border:3px solid var(--ink);padding:20px;text-decoration:none;display:block;transition:transform .2s cubic-bezier(.34,1.56,.64,1),box-shadow .2s cubic-bezier(.34,1.56,.64,1)}
+.transport-card:hover{transform:translate(-3px,-4px) rotate(1deg);box-shadow:8px 9px 0 var(--blue)}
+.transport-card strong{display:block;font-family:Anton,sans-serif;font-size:24px;line-height:.9;margin-bottom:10px;text-transform:uppercase;color:var(--blue)}
+.transport-card span{color:var(--muted);font-weight:800;line-height:1.5;font-size:13px}
+
+/* ============ TIKTOK / VIBE ============ */
+.social-section{background:var(--ink);color:var(--black)}
+.social-section .section-copy{color:rgba(17,17,17,.68)}
+.tiktok-strip{display:flex;gap:12px;overflow-x:auto;margin-top:24px;padding-bottom:8px;scrollbar-width:thin}
+.tiktok-embed-card{flex:0 0 220px;height:390px;background:var(--navy-deep);border:3px solid var(--black);overflow:hidden;position:relative;display:flex;flex-direction:column}
+.tiktok-embed-card iframe{width:100%;height:100%;border:0}
+.tiktok-embed-card a{position:absolute;bottom:10px;left:10px;right:10px;text-align:center;background:var(--yellow);color:var(--black);font-family:Anton,sans-serif;font-size:12px;text-transform:uppercase;padding:8px;text-decoration:none;letter-spacing:.05em}
+.tiktok-loading-card,.tiktok-see-more-card{flex:0 0 220px;height:390px;background:var(--navy);color:var(--ink);border:3px solid var(--black);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:20px;text-decoration:none}
+.tiktok-loading-card strong,.tiktok-see-more-card strong{font-family:Anton,sans-serif;font-size:18px;text-transform:uppercase;margin-bottom:8px}
+.tiktok-see-more-card span,.tiktok-see-more-card em{display:block;font-size:12px;color:var(--muted);font-style:normal}
+.tiktok-see-more-card em{color:var(--blue);margin-top:8px;font-weight:900}
+
+/* ============ FOOTER ============ */
+.footer{padding:36px 22px;border-top:3px solid var(--ink);background:var(--navy-deep)}
+.footer-inner{max-width:1220px;margin:auto;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:24px}
+.footer-brand img{height:42px;width:auto;margin-bottom:12px}
+.footer-brand p{color:rgba(255,248,236,.58);font-size:12px;font-weight:700;line-height:1.5;max-width:260px}
+.footer-col{display:flex;flex-direction:column;gap:8px;font-size:12px;font-weight:800}
+.footer-col strong{font-family:Anton,sans-serif;font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--blue);margin-bottom:4px}
+.footer-col a{text-decoration:none;color:rgba(255,248,236,.72);display:inline-block;transition:transform .18s cubic-bezier(.34,1.56,.64,1),color .15s;width:fit-content}
+.footer-col a:hover{color:var(--yellow);transform:translateX(4px) rotate(-1deg)}
+.footer-col span{color:rgba(255,248,236,.4)}
+
+/* ============ MODALS (event/vendor/info) ============ */
+.bm-modal{position:fixed;inset:0;z-index:1200;display:none;align-items:center;justify-content:center;padding:18px;background:rgba(0,0,0,.78)}
+.bm-modal.open{display:flex}
+.bm-dialog{width:min(920px,100%);max-height:88svh;overflow:auto;background:var(--ink);color:var(--black);border:4px solid var(--black);box-shadow:12px 12px 0 var(--red);position:relative;opacity:0;transform:translateY(30px) scale(.9) rotate(-1.5deg);animation:modalPop .4s cubic-bezier(.22,1.4,.36,1) forwards}
+@keyframes modalPop{to{opacity:1;transform:translateY(0) scale(1) rotate(0)}}
+.bm-modal-close{position:sticky;top:14px;float:right;margin:14px 14px 0 0;width:40px;height:40px;border:3px solid var(--black);background:var(--yellow);color:var(--black);font-family:Anton,sans-serif;font-size:22px;cursor:pointer;z-index:2;transition:transform .2s cubic-bezier(.34,1.56,.64,1),box-shadow .2s;box-shadow:3px 3px 0 var(--red)}
+.bm-modal-close:hover{transform:rotate(90deg) scale(1.1);box-shadow:5px 5px 0 var(--red)}
+.bm-modal-head{padding:26px 26px 0}
+.bm-modal-head h3{font-family:Anton,sans-serif;font-size:clamp(32px,5vw,48px);line-height:.92;text-transform:uppercase}
+.bm-modal-head h3 span{color:var(--red)}
+.bm-modal-head p{margin-top:10px;font-weight:700;color:rgba(17,17,17,.68);line-height:1.5;max-width:640px}
+.bm-modal-body{padding:22px 26px 30px}
+.modal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:20px}
+.modal-info{background:#fff;border:2px solid var(--black);padding:14px}
+.modal-info span{display:block;font-size:10px;font-weight:900;text-transform:uppercase;letter-spacing:.08em;color:var(--red);margin-bottom:4px}
+.modal-info strong{font-weight:800;font-size:14px;line-height:1.3}
+.schedule-list{display:grid;gap:8px;margin-bottom:20px}
+.schedule-row{display:flex;justify-content:space-between;background:#fff;border:2px solid var(--black);padding:12px 16px;font-weight:800;font-size:14px}
+.share-preview{border:3px solid var(--black);margin-bottom:20px;overflow:hidden}
+.modal-actions{display:flex;flex-wrap:wrap;gap:10px}
+.modal-actions a,.modal-actions button{border:3px solid var(--black);background:var(--navy);color:var(--ink);padding:12px 18px;font-family:Anton,sans-serif;font-size:13px;text-transform:uppercase;text-decoration:none;cursor:pointer;letter-spacing:.04em;box-shadow:3px 3px 0 var(--red);transition:transform .2s cubic-bezier(.34,1.56,.64,1),box-shadow .2s cubic-bezier(.34,1.56,.64,1)}
+.modal-actions a:hover,.modal-actions button:hover{transform:translate(-3px,-3px) rotate(-1.5deg);box-shadow:6px 6px 0 var(--red)}
+.vendor-category-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.vendor-cat h4{font-family:Anton,sans-serif;font-size:20px;text-transform:uppercase;color:var(--red);margin-bottom:12px}
+.vendor-cat ul{list-style:none;display:grid;gap:10px}
+.vendor-cat li{display:flex;flex-direction:column;font-size:13px}
+.vendor-cat li strong{font-weight:800}
+.vendor-cat li span{color:rgba(17,17,17,.6);font-weight:700;font-size:12px}
+.info-copy p{font-weight:700;line-height:1.6;margin-bottom:12px;color:rgba(17,17,17,.75)}
+.info-copy h4{font-family:Anton,sans-serif;font-size:20px;text-transform:uppercase;margin:16px 0 10px}
+.info-copy ul{list-style:disc;padding-left:20px;display:grid;gap:8px;font-weight:700;color:rgba(17,17,17,.75)}
+.info-pill-row{display:flex;gap:8px;margin-top:16px;flex-wrap:wrap}
+.info-pill{background:var(--yellow);border:2px solid var(--black);padding:6px 12px;font-family:Anton,sans-serif;font-size:11px;text-transform:uppercase}
+
+/* ============ PROFILE / GIVEAWAY MODAL ============ */
+.profile-modal{position:fixed;inset:0;background:rgba(0,0,0,.78);z-index:1300;display:none;align-items:center;justify-content:center;padding:18px}
+.profile-modal.open{display:flex}
+.profile-dialog{width:min(480px,100%);background:var(--ink);color:var(--black);border:4px solid var(--black);box-shadow:10px 10px 0 var(--red);padding:26px;position:relative;opacity:0;transform:translateY(30px) scale(.9) rotate(1.5deg);animation:modalPop .4s cubic-bezier(.22,1.4,.36,1) forwards}
+.profile-close{position:absolute;top:12px;right:12px;width:34px;height:34px;border:3px solid var(--black);background:var(--yellow);font-family:Anton,sans-serif;font-size:18px;cursor:pointer;transition:transform .2s cubic-bezier(.34,1.56,.64,1);box-shadow:3px 3px 0 var(--red)}
+.profile-close:hover{transform:rotate(90deg) scale(1.1)}
+.profile-dialog h3{font-family:Anton,sans-serif;font-size:36px;line-height:.9;text-transform:uppercase;margin-bottom:10px}
+.profile-dialog p{font-weight:700;color:rgba(17,17,17,.68);line-height:1.5;margin-bottom:16px;font-size:14px}
+.form-grid{display:grid;gap:10px}
+.form-grid input:not([type=checkbox]){width:100%;border:3px solid var(--black);background:#fff;padding:13px;font-family:Montserrat,sans-serif;font-weight:700;font-size:14px}
+.form-grid label{display:flex;gap:8px;align-items:flex-start;font-size:12px;font-weight:800;line-height:1.35}
+.form-grid label input{width:auto;margin-top:2px}
+.submit-btn{border:3px solid var(--black);background:var(--red);color:#fff;padding:14px;font-family:Anton,sans-serif;font-size:17px;text-transform:uppercase;cursor:pointer;box-shadow:5px 5px 0 var(--black);transition:transform .2s cubic-bezier(.34,1.56,.64,1),box-shadow .2s cubic-bezier(.34,1.56,.64,1)}
+.submit-btn:hover{transform:translate(-3px,-3px) rotate(-1deg);box-shadow:8px 8px 0 var(--black)}
+.submit-btn:disabled{opacity:.7;cursor:default;transform:none}
+.form-message{font-weight:800;font-size:12px;margin-top:4px}
+
+/* ============================================================
+   MOBILE MENU — full-screen bouncy takeover, single implementation
+   ============================================================ */
+@media(max-width:900px){
+  .nav-links{
+    position:fixed;
+    inset:0;
+    width:100%;
+    height:100svh;
+    background:
+      radial-gradient(circle at 85% 12%,rgba(83,200,242,.22),transparent 32%),
+      radial-gradient(circle at 10% 88%,rgba(224,25,63,.24),transparent 30%),
+      var(--navy);
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:16px;
+    padding:32px;
+    z-index:250;
+    opacity:0;
+    visibility:hidden;
+    transform:scale(1.04);
+    transition:opacity .3s ease,visibility 0s linear .3s;
+  }
+  body.menu-open .nav-links{
+    opacity:1;
+    visibility:visible;
+    transform:scale(1);
+    transition:opacity .3s ease,visibility 0s;
+  }
+  .nav-links:before{
+    content:'MENU';
+    position:absolute;
+    top:26px;
+    left:26px;
+    font-family:Anton,sans-serif;
+    font-size:13px;
+    letter-spacing:.3em;
+    color:var(--muted);
+  }
+  .mobile-menu-close{
+    display:grid;
+    place-items:center;
+    position:absolute;
+    top:20px;
+    right:20px;
+    width:48px;
+    height:48px;
+    border:3px solid var(--ink);
+    background:var(--red);
+    color:#fff;
+    font-family:Anton,sans-serif;
+    font-size:24px;
+    cursor:pointer;
+    box-shadow:4px 4px 0 var(--yellow);
+    transition:transform .25s cubic-bezier(.34,1.56,.64,1);
+  }
+  .mobile-menu-close:hover{transform:rotate(90deg) scale(1.1)}
+  .nav-links a{
+    font-family:Anton,sans-serif;
+    font-size:clamp(30px,9vw,42px);
+    letter-spacing:.01em;
+    color:var(--ink);
+    background:transparent;
+    padding:10px 22px;
+    border:3px solid transparent;
+    border-radius:4px;
+    text-align:center;
+    opacity:0;
+    transform:translateY(36px) rotate(-3deg) scale(.85);
+  }
+  body.menu-open .nav-links a{
+    animation:menuLinkIn .5s cubic-bezier(.22,1.4,.36,1) forwards;
+  }
+  body.menu-open .nav-links a:nth-child(2){animation-delay:.06s}
+  body.menu-open .nav-links a:nth-child(3){animation-delay:.12s}
+  body.menu-open .nav-links a:nth-child(4){animation-delay:.18s}
+  body.menu-open .nav-links a:nth-child(5){animation-delay:.24s}
+  body.menu-open .nav-links a:nth-child(6){animation-delay:.30s}
+  body.menu-open .nav-links a:nth-child(7){animation-delay:.36s}
+  @keyframes menuLinkIn{
+    60%{opacity:1;transform:translateY(-4px) rotate(1deg) scale(1.04)}
+    100%{opacity:1;transform:translateY(0) rotate(0) scale(1)}
+  }
+  .nav-links a:hover{background:rgba(255,248,236,.08);border-color:var(--ink);transform:translate(-2px,-2px) rotate(-2deg)!important;box-shadow:4px 4px 0 var(--blue)}
+  .nav-links .hot{background:var(--yellow);color:var(--black);border-color:var(--black);box-shadow:5px 5px 0 var(--red);margin-top:14px}
+  .nav-links .hot:hover{transform:translate(-2px,-2px) rotate(2deg)!important;box-shadow:8px 8px 0 var(--red)}
+  .nav-toggle{display:flex}
+  .logo-full{display:none}
+  .logo-mobile-mark{display:block}
+  .nav-backdrop{display:none}
+  body.menu-open{overflow:hidden}
+}
+@media(min-width:901px){
+  .nav-backdrop,.mobile-menu-close{display:none}
+}
+
+/* ============ RESPONSIVE ============ */
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr;min-height:auto;padding-top:44px}
+  .poster-stack{min-height:0;max-width:480px;width:100%;margin:0 auto;padding:10px 34px 28px 10px}
+  .poster-main{width:min(100%,430px)}
+  .info-grid{grid-template-columns:repeat(2,1fr)}
+  .info-item:nth-child(2){border-right:0}
+  .info-item:nth-child(-n+2){border-bottom:3px solid var(--black)}
+  .section-head{align-items:flex-start;flex-direction:column}
+  .whats-grid{grid-template-columns:1fr 1fr}
+  .find-grid{grid-template-columns:1fr}
+  .transport-panel{grid-template-columns:1fr 1fr}
+  .give-card{grid-template-columns:1fr}
+  .modal-grid,.vendor-category-grid{grid-template-columns:1fr 1fr}
+  .footer-inner{grid-template-columns:1fr 1fr}
+}
+@media(max-width:560px){
+  .top-tape span{font-size:12px}
+  .hero-inner{padding:36px 18px 44px}
+  .hero-copy{font-size:14px}
+  .hero-actions .btn{width:100%}
+  .poster-stack{min-height:0;width:100%;padding:8px 22px 24px 4px;display:grid}
+  .poster-main{display:block!important;visibility:visible!important;opacity:1!important;width:min(92vw,430px);aspect-ratio:var(--flyer-ratio,4/5);margin:0 auto}
+  .poster-main img{display:block!important;visibility:visible!important;opacity:1!important;width:100%;height:100%;object-fit:contain}
+  .mini-note{width:120px;padding:12px;right:4px;top:18px}
+  .mini-note strong{font-size:30px}
+  .smiley{width:78px;height:78px;font-size:30px}
+  .info-item{padding:14px 6px}
+  .info-item strong{font-size:26px}
+  .info-item span{font-size:7.5px}
+  .section{padding:52px 18px}
+  .count-inner{flex-direction:column;align-items:stretch}
+  .count-actions{display:grid;grid-template-columns:1fr 1fr}
+  .whats-grid{grid-template-columns:1fr}
+  .winterfest-card{grid-template-columns:1fr;text-align:left}
+  .winterfest-arrow{justify-self:start}
+  .transport-panel{grid-template-columns:1fr}
+  .modal-grid,.vendor-category-grid{grid-template-columns:1fr}
+  .schedule-row{flex-direction:column;gap:4px}
+  .footer-inner{grid-template-columns:1fr;gap:20px}
+  .give-card{padding:22px 18px}
+  .tiktok-embed-card,.tiktok-loading-card,.tiktok-see-more-card{flex:0 0 200px;height:350px}
+}
+
+
+/* ============ POLISH PATCH: fuller vendors, sectioned popups, countdown, calmer icons ============ */
+.countdown-section{padding:30px 22px;background:linear-gradient(180deg,var(--navy-deep),var(--navy));border-bottom:3px solid var(--ink)}
+.countdown-wrap{max-width:1220px;margin:auto;border:3px solid var(--ink);background:rgba(255,255,255,.035);box-shadow:10px 10px 0 rgba(224,25,63,.72);padding:24px;display:grid;grid-template-columns:minmax(220px,.65fr) 1.35fr;gap:26px;align-items:center;position:relative;overflow:hidden}
+.countdown-wrap:before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 88% 22%,rgba(83,200,242,.18),transparent 24%),radial-gradient(circle at 12% 85%,rgba(224,25,63,.16),transparent 24%);pointer-events:none}
+.countdown-copy,.countdown-grid{position:relative;z-index:1}.countdown-copy .label{margin-bottom:10px}.countdown-copy h2{font-family:Anton,sans-serif;font-size:clamp(34px,5vw,62px);line-height:.88;text-transform:uppercase}.countdown-copy h2 span{color:var(--yellow)}.countdown-copy p{margin-top:10px;color:var(--muted);font-weight:700;line-height:1.5;font-size:13px}
+.countdown-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.countdown-unit{background:var(--ink);color:var(--black);border:3px solid var(--black);min-height:110px;padding:14px 8px;display:grid;place-items:center;text-align:center;box-shadow:5px 5px 0 var(--blue);transition:transform .2s cubic-bezier(.34,1.56,.64,1),box-shadow .2s}.countdown-unit:hover{transform:translate(-2px,-3px) rotate(-1deg);box-shadow:8px 8px 0 var(--red)}.countdown-unit strong{display:block;font-family:Anton,sans-serif;font-size:clamp(38px,5vw,62px);line-height:.85}.countdown-unit span{display:block;margin-top:7px;font-size:10px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:rgba(11,11,20,.62)}
+
+.vendor-marquee{padding:22px 0;min-height:236px;display:flex;flex-direction:column;justify-content:center;gap:12px}.vendor-marquee-row{margin:0}.vendor-marquee-track{gap:14px}.vendor-marquee-track span{padding:16px 24px;font-size:clamp(16px,1.75vw,22px);min-height:62px;box-shadow:5px 5px 0 var(--red)}
+
+.vendor-category-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-areas:'savoury savoury savoury' 'sweet beverages retail';align-items:start;gap:16px}.vendor-cat{background:#fff;border:3px solid var(--black);box-shadow:6px 6px 0 rgba(16,20,58,.18);overflow:hidden}.vendor-cat.savoury{grid-area:savoury}.vendor-cat.sweet{grid-area:sweet}.vendor-cat.beverages{grid-area:beverages}.vendor-cat.retail{grid-area:retail}.vendor-cat h4{margin:0;padding:14px 16px;background:var(--navy);color:var(--ink);border-bottom:3px solid var(--black);font-size:24px}.vendor-cat:nth-child(2) h4{background:var(--red)}.vendor-cat:nth-child(3) h4{background:var(--blue);color:var(--black)}.vendor-cat:nth-child(4) h4{background:var(--yellow);color:var(--black)}.vendor-cat ul{padding:12px;gap:8px}.vendor-cat.savoury ul{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:10px}.vendor-cat li{padding:10px 11px;background:#f8f4eb;border:2px solid rgba(11,11,20,.14);border-radius:2px;transition:transform .18s cubic-bezier(.34,1.56,.64,1),border-color .18s,background .18s}.vendor-cat li:hover{transform:translateX(3px);border-color:var(--black);background:#fff}.vendor-cat li strong{font-size:13px}.vendor-cat li span{margin-top:3px;line-height:1.35}
+
+.info-copy{display:grid;gap:12px}.info-copy>p,.info-copy>ul,.info-copy>h4{margin:0}.info-copy h4{background:var(--navy);color:var(--ink);border:3px solid var(--black);padding:12px 14px;box-shadow:4px 4px 0 var(--red)}.info-copy p,.info-copy ul{background:#fff;border:2px solid rgba(11,11,20,.18);padding:14px 16px}.info-copy ul{padding-left:34px}.info-pill-row{padding-top:4px}
+
+.bm-modal-body{background:#f1ecdf}.bm-modal-head{background:var(--ink)}.modal-grid,.schedule-list,.share-preview,.modal-actions,.vendor-category-grid,.info-copy{position:relative}.schedule-row{border-width:3px;box-shadow:3px 3px 0 rgba(16,20,58,.16)}
+
+.whats-card{overflow:hidden}.whats-icon{width:48px;height:48px;display:grid;place-items:center;font-size:28px;margin-bottom:12px;background:rgba(16,20,58,.08);border:2px solid rgba(11,11,20,.12);border-radius:8px;transform:none!important}.whats-card:hover .whats-icon{animation:iconNudge .32s ease both}.whats-card:hover{transform:translate(-3px,-4px) rotate(-.5deg)}@keyframes iconNudge{0%{transform:translateY(0) rotate(0)}50%{transform:translateY(-3px) rotate(-4deg)}100%{transform:translateY(0) rotate(0)}}
+
+@media(max-width:900px){
+  .countdown-wrap{grid-template-columns:1fr}.countdown-grid{grid-template-columns:repeat(4,1fr)}
+  .vendor-category-grid{grid-template-columns:1fr 1fr;grid-template-areas:'savoury savoury' 'sweet beverages' 'retail retail'}.vendor-cat.savoury ul{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .nav-links{align-items:stretch;justify-content:center;gap:12px;padding:84px 20px 28px}
+  .nav-links:before{left:20px;top:20px}
+  .nav-links a{width:min(100%,520px);margin:0 auto;background:rgba(255,248,236,.07);border:2px solid rgba(255,248,236,.42);box-shadow:5px 5px 0 rgba(83,200,242,.28);padding:15px 18px;text-align:left;display:flex;align-items:center;justify-content:space-between;border-radius:6px;font-size:clamp(25px,7.6vw,38px)}
+  .nav-links a:after{content:'→';font-size:.72em;color:var(--yellow)}
+  .nav-links .hot{margin-top:2px;background:var(--yellow);border-color:var(--black);box-shadow:6px 6px 0 var(--red)}
+}
+@media(max-width:560px){
+  .countdown-section{padding:24px 14px}.countdown-wrap{padding:18px;box-shadow:7px 7px 0 rgba(224,25,63,.72)}.countdown-grid{grid-template-columns:repeat(2,1fr)}.countdown-unit{min-height:92px}.countdown-unit strong{font-size:44px}
+  .vendor-marquee{min-height:210px;padding:18px 0}.vendor-marquee-track span{padding:14px 18px;font-size:16px;min-height:56px}
+  .vendor-category-grid{grid-template-columns:1fr;grid-template-areas:'savoury' 'sweet' 'beverages' 'retail'}.vendor-cat.savoury ul{grid-template-columns:1fr}.vendor-cat h4{font-size:22px}.bm-modal-body{padding:18px}.bm-modal-head{padding:22px 18px 0}.bm-dialog{width:100%;max-height:92svh}
+  .nav-links{padding:76px 16px 22px;gap:10px}.nav-links a{min-height:56px;padding:13px 15px;font-size:clamp(23px,7.8vw,34px)}.mobile-menu-close{top:14px;right:14px;width:44px;height:44px}
+}
+
+</style>
+</head>
+<body>
+
+<div class="top-tape"><div class="top-tape-track">
+  <span>Richmond Winterfest</span><span>Good Food</span><span>Good People</span><span>Free Entry</span><span>31 July - 2 August</span><span>Richmond Race Club</span>
+  <span>Richmond Winterfest</span><span>Good Food</span><span>Good People</span><span>Free Entry</span><span>31 July - 2 August</span><span>Richmond Race Club</span>
+</div></div>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="logo" href="#top">
+      <img class="logo-full" src="bossman-logo-white.png" alt="Bossman Experiences">
+      <img class="logo-mobile-mark" src="bossman-b-logo-white.png" alt="Bossman Experiences">
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-backdrop" data-close-menu></div>
+    <div class="nav-links">
+      <button class="mobile-menu-close" type="button" aria-label="Close menu" data-close-menu>×</button>
+      <a href="#vendors">Vendors</a>
+      <a href="#event" data-open-event>Event Details</a>
+      <a href="#whats-on">What's On</a>
+      <a href="#location">Find Us</a>
+      <a href="#vibe">Vibe</a>
+      <a href="#giveaway" class="hot">Giveaway</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-inner">
+    <div>
+      <div class="badge-row">
+        <span class="scribble-badge">Western Sydney Winterfest</span>
+        <span class="scribble-badge">Free Entry</span>
+        <span class="scribble-badge">31 July - 2 August</span>
+      </div>
+      <h1 class="rotating-hero">
+        <span class="good-word">Winter...</span>
+        <span class="rotating-words"><span>food</span><span>rides</span><span>games</span><span>nights</span></span>
+      </h1>
+      <p class="hero-copy">Western Sydney Winterfest lands at Richmond Raceclub, 312 Londonderry Rd, Londonderry NSW 2753. Free entry, 25+ food vendors, carnival rides, side games, free kids activities, showbags, live entertainment and a fully undercover event.</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#giveaway">Enter Giveaway</a>
+        <button class="btn secondary" type="button" data-open-event>Event Details</button>
+      </div>
+    </div>
+    <div class="poster-stack">
+      <div class="poster-card poster-main">
+        <img src="event-flyer.jpeg" alt="Western Sydney Winterfest event flyer">
+      </div>
+      <div class="mini-note"><strong>25+</strong> food vendors</div>
+      <div class="smiley">☺</div>
+    </div>
+  </div>
+</header>
+
+<section class="info-strip">
+  <div class="info-grid">
+    <div class="info-item"><strong>25+</strong><span>Food Vendors</span></div>
+    <div class="info-item"><strong>3</strong><span>Big Days</span></div>
+    <div class="info-item"><strong>$0</strong><span>Free Entry</span></div>
+    <div class="info-item"><strong>1</strong><span>Huge Carpark</span></div>
+  </div>
+</section>
+
+<section class="countdown-section" aria-label="Countdown to Western Sydney Winterfest">
+  <div class="countdown-wrap">
+    <div class="countdown-copy">
+      <div class="label">Countdown</div>
+      <h2>Winterfest starts <span>in...</span></h2>
+      <p>Counting down to Friday 31 July 2026 at 5pm, Sydney time.</p>
+    </div>
+    <div class="countdown-grid" data-event-countdown>
+      <div class="countdown-unit"><strong data-days>00</strong><span>Days</span></div>
+      <div class="countdown-unit"><strong data-hours>00</strong><span>Hours</span></div>
+      <div class="countdown-unit"><strong data-minutes>00</strong><span>Minutes</span></div>
+      <div class="countdown-unit"><strong data-seconds>00</strong><span>Seconds</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="count-bar">
+  <div class="count-inner">
+    <div class="count-text"><strong data-count-number>247</strong> people counted in for Western Sydney Winterfest</div>
+    <div class="count-actions">
+      <button type="button" data-count-me-in>Count Me In</button>
+      <button type="button" data-share-event>Share</button>
+    </div>
+  </div>
+</section>
+
+<section class="event-feature" id="event">
+  <div class="event-feature-inner">
+    <button class="winterfest-card" type="button" data-open-event>
+      <div>
+        <div class="label">Next Event</div>
+        <div class="winterfest-title">Richmond <span>Winterfest</span></div>
+        <div class="winterfest-meta">Richmond Raceclub, 312 Londonderry Rd, Londonderry NSW 2753, 31 July - 2 August, Free Entry, Event Is Undercover</div>
+      </div>
+      <div class="winterfest-arrow">→</div>
+    </button>
+  </div>
+</section>
+
+<section class="section giveaway" id="giveaway">
+  <div class="wrap">
+    <div class="give-card">
+      <div>
+        <div class="label">Giveaway</div>
+        <h2>Win free<br><span>food vouchers.</span></h2>
+        <p>This is the first stop after the banner for a reason. Enter the Bossman giveaway, get vendor drops, event alerts and exclusive updates before everyone else.</p>
+      </div>
+      <button type="button" data-open-profile>Enter Giveaway</button>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="whats-on">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="label">What's on</div>
+        <h2>Winter fun,<br><span>all weekend.</span></h2>
+      </div>
+      <p class="section-copy">A quick guide to what you can expect across Western Sydney Winterfest, from food and rides to live entertainment and family activities.</p>
+    </div>
+    <div class="whats-grid">
+      <button class="whats-card" type="button" data-open-vendors><span class="whats-icon">🍔</span><strong>25+ Food Vendors</strong><small>Sweet, savoury, BBQ, burgers, pasta, desserts and winter treats.</small></button>
+      <button class="whats-card" type="button" data-open-event><span class="whats-icon">🎡</span><strong>Carnival Rides</strong><small>Festival rides and side games to keep the energy moving.</small></button>
+      <button class="whats-card" type="button" data-open-event><span class="whats-icon">🎯</span><strong>Side Games</strong><small>Fun fair-style activities, prizes, showbags and more.</small></button>
+      <button class="whats-card" type="button" data-open-profile><span class="whats-icon">🎁</span><strong>Giveaways</strong><small>Enter online and keep an eye out for Bossman event updates.</small></button>
+      <button class="whats-card" type="button" data-open-event><span class="whats-icon">🎤</span><strong>Live Entertainment</strong><small>Music, atmosphere and all the winter night market vibes.</small></button>
+      <button class="whats-card" type="button" data-open-event><span class="whats-icon">👨‍👩‍👧‍👦</span><strong>Free Kids Activities</strong><small>Family-friendly things to do across the event weekend.</small></button>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="vendors">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="label">Food vendor lineup</div>
+        <h2>Moving feeds.<br><span>Two rows of flavour.</span></h2>
+      </div>
+      <button class="vendor-lineup-btn" type="button" data-open-vendors>View Full Lineup</button>
+    </div>
+    <div class="vendor-marquee" aria-label="Moving vendor lineup">
+      <div class="vendor-marquee-row">
+        <div class="vendor-marquee-track">
+          <span>Gringos</span><span>Burger Head</span><span>Teetzz Eatz</span><span>Baked By Tama</span><span>BBQ Bros</span><span>Nonna Pasta</span><span>Detroit Dip</span><span>Dani and Junior</span><span>Homemade Dumplings</span><span>Spudhole</span><span>Tortatoes</span><span>Hellenic Grill</span><span>Loaded Cobs</span><span>Kozmick</span><span>Hangi Kingdom</span><span>Skewies</span><span>Pharoah</span>
+          <span>Gringos</span><span>Burger Head</span><span>Teetzz Eatz</span><span>Baked By Tama</span><span>BBQ Bros</span><span>Nonna Pasta</span><span>Detroit Dip</span>
+        </div>
+      </div>
+      <div class="vendor-marquee-row reverse">
+        <div class="vendor-marquee-track">
+          <span>Cheeky Crumbles</span><span>Nonna Maria's</span><span>Doughlicious Desserts</span><span>Stroop Bros</span><span>K-Thirst</span><span>Franco the Coffee Truck</span><span>Wishtoys</span><span>Fairyfloss</span><span>Showbags</span>
+          <span>Cheeky Crumbles</span><span>Nonna Maria's</span><span>Doughlicious Desserts</span><span>Stroop Bros</span><span>K-Thirst</span><span>Franco the Coffee Truck</span><span>Wishtoys</span><span>Fairyfloss</span><span>Showbags</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="location">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="label">Find us</div>
+        <h2>Plan your visit,<br><span>then pull up.</span></h2>
+      </div>
+      <a class="link-brush" href="https://www.google.com/maps/search/?api=1&query=312+Londonderry+Rd+Londonderry+NSW+2753" target="_blank" rel="noopener">Open Maps</a>
+    </div>
+    <div class="find-grid">
+      <a class="find-card" href="https://www.google.com/maps/search/?api=1&query=312+Londonderry+Rd+Londonderry+NSW+2753" target="_blank" rel="noopener"><strong>Venue</strong><span>Richmond Raceclub</span></a>
+      <a class="find-card" href="https://www.google.com/maps/search/?api=1&query=312+Londonderry+Rd+Londonderry+NSW+2753" target="_blank" rel="noopener"><strong>Address</strong><span>312 Londonderry Rd, Londonderry NSW 2753</span></a>
+      <button class="find-card" type="button" data-open-event><strong>Hours</strong><span>Fri 5-10, Sat 12-10, Sun 12-8</span></button>
+    </div>
+    <div class="map-box">
+      <iframe loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=312%20Londonderry%20Rd%2C%20Londonderry%20NSW%202753&output=embed"></iframe>
+    </div>
+    <div class="transport-panel" aria-label="Transport and parking options">
+      <div class="transport-card"><strong>Free parking</strong><span>500+ free parking spots onsite at Richmond Raceclub.</span></div>
+      <a class="transport-card" href="https://transportnsw.info/trip" target="_blank" rel="noopener"><strong>Train</strong><span>Take the T1/T5 Western Line towards Richmond, then connect by bus, rideshare or taxi to 312 Londonderry Rd. Check live times before leaving.</span></a>
+      <a class="transport-card" href="https://transportnsw.info/trip" target="_blank" rel="noopener"><strong>Bus</strong><span>Nearby public transport includes local Busways services around Londonderry and Richmond. Use Transport NSW Trip Planner for live route timing.</span></a>
+      <a class="transport-card" href="https://www.google.com/maps/dir/?api=1&destination=312+Londonderry+Rd,+Londonderry+NSW+2753&travelmode=driving" target="_blank" rel="noopener"><strong>Rideshare</strong><span>Set your drop-off to Richmond Raceclub, 312 Londonderry Rd. Uber, DiDi, Ola or taxi are the easiest door-to-door options.</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="section social-section" id="vibe">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="label">Latest TikToks</div>
+        <h2>Fresh from<br><span>@bossman_experiences.</span></h2>
+      </div>
+    </div>
+    <div class="tiktok-strip" data-tiktok-feed aria-live="polite">
+      <div class="tiktok-loading-card"><strong>Loading latest TikToks...</strong><span>Fresh videos incoming</span></div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="bossman-logo-white.png" alt="Bossman Experiences">
+      <p>Good food, good people, good times, delivered with Bossman energy.</p>
+    </div>
+    <div class="footer-col">
+      <strong>Event</strong>
+      <a href="#event" data-open-event>Western Sydney Winterfest</a>
+      <a href="#giveaway">Giveaway</a>
+      <a href="#vendors">Vendors</a>
+    </div>
+    <div class="footer-col">
+      <strong>Links</strong>
+      <a href="#about" data-open-info="about-modal">About</a>
+      <a href="#faq" data-open-info="faq-modal">FAQ</a>
+    </div>
+    <div class="footer-col">
+      <strong>Legal</strong>
+      <a href="#terms" data-open-info="terms-modal">Terms</a>
+      <a href="#privacy" data-open-info="privacy-modal">Privacy</a>
+      <span>© Bossman Experiences</span>
+    </div>
+  </div>
+</footer>
+
+<div class="bm-modal" id="winterfest-modal" aria-hidden="true">
+  <div class="bm-dialog" role="dialog" aria-modal="true" aria-label="Western Sydney Winterfest details">
+    <button class="bm-modal-close" type="button" data-close-modal>×</button>
+    <div class="bm-modal-head">
+      <h3>Richmond <span>Winterfest</span></h3>
+      <p>Three big days of winter carnival energy at Richmond Raceclub, 312 Londonderry Rd, Londonderry NSW 2753. Free entry, big vendor lineup, family-friendly vibes and real Western Sydney flavour.</p>
+    </div>
+    <div class="bm-modal-body">
+      <div class="modal-grid">
+        <div class="modal-info"><span>Venue</span><strong>Richmond Raceclub</strong></div>
+        <div class="modal-info"><span>Address</span><strong>312 Londonderry Rd<br>Londonderry NSW 2753</strong></div>
+        <div class="modal-info"><span>Dates</span><strong>31st July - 2nd August</strong></div>
+        <div class="modal-info"><span>Entry</span><strong>Free Entry</strong></div>
+      </div>
+      <div class="schedule-list">
+        <div class="schedule-row"><b>Friday 31st July</b><span>5pm - 10pm</span></div>
+        <div class="schedule-row"><b>Saturday 1st August</b><span>12pm - 10pm</span></div>
+        <div class="schedule-row"><b>Sunday 2nd August</b><span>12pm - 8pm</span></div>
+      </div>
+      <div class="share-preview"><img src="share-richmond-winterfest.png" alt="Western Sydney Winterfest share image preview"></div>
+      <div class="modal-actions">
+        <a href="https://www.google.com/maps/search/?api=1&query=312+Londonderry+Rd+Londonderry+NSW+2753" target="_blank" rel="noopener">Open Maps</a>
+        <button type="button" data-count-me-in>Count Me In</button>
+        <button type="button" data-open-vendors>Vendor Lineup</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="bm-modal" id="vendor-modal" aria-hidden="true">
+  <div class="bm-dialog" role="dialog" aria-modal="true" aria-label="Vendor lineup">
+    <button class="bm-modal-close" type="button" data-close-modal>×</button>
+    <div class="bm-modal-head">
+      <h3>Vendor <span>Lineup</span></h3>
+      <p>Browse the complete Western Sydney Winterfest lineup across savoury food, sweets, beverages and retail.</p>
+    </div>
+    <div class="bm-modal-body">
+      <div class="vendor-category-grid">
+        <div class="vendor-cat savoury">
+          <h4>Savoury</h4>
+          <ul>
+            <li><strong>Gringos</strong><span>Mexican Street Food</span></li>
+            <li><strong>Burger Head</strong><span>Burgers</span></li>
+            <li><strong>Teetzz Eatz</strong><span>Fried Bread Burgers</span></li>
+            <li><strong>Baked By Tama</strong><span>Homemade Pies</span></li>
+            <li><strong>BBQ Bros</strong><span>Steak Frites</span></li>
+            <li><strong>Nonna Pasta</strong><span>Fresh Italian Pasta</span></li>
+            <li><strong>Detroit Dip</strong><span>Detroit Style Pizza</span></li>
+            <li><strong>Dani and Junior</strong><span>Polynesian BBQ Plates</span></li>
+            <li><strong>Homemade Dumplings</strong><span>Dumpling Cups</span></li>
+            <li><strong>Spudhole</strong><span>Loaded Potatoes</span></li>
+            <li><strong>Tortatoes</strong><span>Amsterdam Fries &amp; Twisted Potatoes</span></li>
+            <li><strong>Hellenic Grill</strong><span>Greek Style BBQ</span></li>
+            <li><strong>Loaded Cobs</strong><span>Loaded Cob Loaves</span></li>
+            <li><strong>Kozmick</strong><span>Polynesian BBQ</span></li>
+            <li><strong>Hangi Kingdom</strong><span>Traditional Hangi</span></li>
+            <li><strong>Skewies</strong><span>Fried Chicken</span></li>
+            <li><strong>Pharoah</strong><span>African Fusion</span></li>
+          </ul>
+        </div>
+        <div class="vendor-cat sweet">
+          <h4>Sweet</h4>
+          <ul>
+            <li><strong>Nonna Maria's</strong><span>Tiramisu</span></li>
+            <li><strong>Doughlicious Desserts</strong><span>Desserts</span></li>
+            <li><strong>Cheeky Crumbles</strong><span>Crème Brûlée, Hot Chocolate &amp; Crumbles</span></li>
+            <li><strong>Stroop Bros</strong><span>Stroopwafels</span></li>
+          </ul>
+        </div>
+        <div class="vendor-cat beverages">
+          <h4>Beverages</h4>
+          <ul>
+            <li><strong>K-Thirst</strong><span>Cold Drinks</span></li>
+            <li><strong>Franco the Coffee Truck</strong><span>Coffee</span></li>
+          </ul>
+        </div>
+        <div class="vendor-cat retail">
+          <h4>Retail</h4>
+          <ul>
+            <li><strong>Wishtoys</strong><span>Toys</span></li>
+            <li><strong>Fairyfloss</strong><span>Fairy Floss</span></li>
+            <li><strong>Showbags</strong><span>Showbags</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="bm-modal" id="about-modal" aria-hidden="true">
+  <div class="bm-dialog" role="dialog" aria-modal="true" aria-label="About Bossman Experiences">
+    <button class="bm-modal-close" type="button" data-close-modal>×</button>
+    <div class="bm-modal-head"><h3>About <span>Bossman</span></h3><p>Bossman Experiences brings food, music and community together through high-energy pop-up events across Western Sydney.</p></div>
+    <div class="bm-modal-body info-copy">
+      <p>We build events that feel easy to attend, fun to share and packed with flavour. Western Sydney Winterfest is designed for families, mates, food lovers and anyone keen for a night out without the stress.</p>
+      <h4>What to expect</h4>
+      <ul><li>Curated street-food vendors with savoury, sweet and drink options.</li><li>A family-friendly setup with space to walk, eat and hang out.</li><li>Free entry and free parking with more than 500 spots available.</li><li>Giveaways, photo moments and a lively winter festival atmosphere.</li></ul>
+      <div class="info-pill-row"><span class="info-pill">Good Food</span><span class="info-pill">Good People</span><span class="info-pill">Good Times</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="bm-modal" id="faq-modal" aria-hidden="true">
+  <div class="bm-dialog" role="dialog" aria-modal="true" aria-label="Western Sydney Winterfest FAQ">
+    <button class="bm-modal-close" type="button" data-close-modal>×</button>
+    <div class="bm-modal-head"><h3>Event <span>FAQ</span></h3><p>Quick answers before you pull up to Western Sydney Winterfest.</p></div>
+    <div class="bm-modal-body info-copy">
+      <h4>Is entry free?</h4><p>Yes, entry to Western Sydney Winterfest is free.</p>
+      <h4>Is parking available?</h4><p>Yes, there is free parking with more than 500 spots available at the venue.</p>
+      <h4>Where is the event?</h4><p>Richmond Raceclub, 312 Londonderry Rd, Londonderry NSW 2753.</p>
+      <h4>What are the opening times?</h4><p>Friday 5pm to 10pm, Saturday 12pm to 10pm, and Sunday 12pm to 8pm.</p>
+      <h4>Is it family-friendly?</h4><p>Yes, the event is designed to be relaxed, welcoming and suitable for all ages.</p>
+      <h4>Can I bring my dog?</h4><p>Assistance animals are welcome. For pets, please check venue guidance before attending.</p>
+    </div>
+  </div>
+</div>
+
+<div class="bm-modal" id="terms-modal" aria-hidden="true">
+  <div class="bm-dialog" role="dialog" aria-modal="true" aria-label="Terms and conditions">
+    <button class="bm-modal-close" type="button" data-close-modal>×</button>
+    <div class="bm-modal-head"><h3>Terms <span>of Entry</span></h3><p>Simple conditions to help keep the event safe, smooth and enjoyable for everyone.</p></div>
+    <div class="bm-modal-body info-copy">
+      <ul><li>Entry is subject to venue capacity, safety requirements and organiser direction.</li><li>Guests must follow reasonable instructions from event staff, security and venue representatives.</li><li>Food, drink, entertainment and vendor availability may change without notice.</li><li>Giveaways and promotions may have separate entry rules, eligibility requirements and closing times.</li><li>By attending, guests understand that photography and video may be captured for event marketing.</li><li>Bossman Experiences may refuse entry or remove guests for unsafe, abusive or disruptive behaviour.</li></ul>
+    </div>
+  </div>
+</div>
+
+<div class="bm-modal" id="privacy-modal" aria-hidden="true">
+  <div class="bm-dialog" role="dialog" aria-modal="true" aria-label="Privacy information">
+    <button class="bm-modal-close" type="button" data-close-modal>×</button>
+    <div class="bm-modal-head"><h3>Privacy <span>Info</span></h3><p>How Bossman Experiences uses information collected through this website and event forms.</p></div>
+    <div class="bm-modal-body info-copy">
+      <p>When you enter a giveaway, count yourself in or request updates, we may collect your name, phone number, email address and event preferences.</p>
+      <p>This information is used to manage event updates, contact giveaway winners, send Bossman Experiences news and improve future events.</p>
+      <p>We do not sell personal information. You can unsubscribe from marketing messages or request removal from our contact list at any time.</p>
+      <p>Some website features may use basic browser information to help measure event interest and improve the online experience.</p>
+    </div>
+  </div>
+</div>
+
+<div class="profile-modal" id="profile-modal">
+  <div class="profile-dialog">
+    <button class="profile-close" type="button" data-close-profile>×</button>
+    <h3>Get locked in.</h3>
+    <p>Enter once for giveaways and future Bossman event updates.</p>
+    <form class="form-grid" id="profile-form">
+      <input type="hidden" name="formType" value="Lead">
+      <input type="hidden" name="eventName" value="Western Sydney Winterfest">
+      <input type="hidden" name="enterGiveaway" value="Yes">
+      <input name="name" placeholder="Name" autocomplete="name" required>
+      <input name="phone" placeholder="Phone" autocomplete="tel" required>
+      <input name="email" type="email" placeholder="Email" autocomplete="email" required>
+      <label><input type="checkbox" name="updates" value="Yes" checked> Send me Bossman event updates, marketing and exclusive coupons.</label>
+      <button class="submit-btn" type="submit">Lock Me In</button>
+      <div class="form-message" id="profile-message"></div>
+    </form>
+  </div>
+</div>
+
+<script>
+/* ===== Lead form + attendance counter (Google Apps Script) ===== */
+(function(){
+  const SHEET_URL='https://script.google.com/macros/s/AKfycbzEAh7w0QJJ56EasaoII5sjNOUlksSQTOul-PW2gGZfh1DJx557pDvfHSsDlmd_wcEh/exec';
+  const EVENT_NAME='Western Sydney Winterfest';
+  const COUNT_KEY='bossman_counted_in_western_sydney_winterfest_2026';
+  const profileModal=document.getElementById('profile-modal');
+  const profileForm=document.getElementById('profile-form');
+  const profileMessage=document.getElementById('profile-message');
+
+  function openProfile(){profileModal.classList.add('open')}
+  function closeProfile(){profileModal.classList.remove('open')}
+  document.querySelectorAll('[data-open-profile]').forEach(btn=>btn.addEventListener('click',openProfile));
+  document.querySelectorAll('[data-close-profile]').forEach(btn=>btn.addEventListener('click',closeProfile));
+  profileModal.addEventListener('click',e=>{if(e.target===profileModal)closeProfile()});
+
+  function setCount(n){document.querySelectorAll('[data-count-number]').forEach(el=>el.textContent=String(Math.max(0,Number(n||0))+247))}
+  async function loadCount(){
+    try{
+      const res=await fetch(SHEET_URL+'?action=attendanceCount&eventName='+encodeURIComponent(EVENT_NAME),{cache:'no-store'});
+      const data=await res.json();
+      if(data&&data.success)setCount(data.count||0);
+    }catch(err){setCount(0)}
+  }
+  function setCountedState(){
+    document.querySelectorAll('[data-count-me-in]').forEach(btn=>{
+      btn.textContent='Counted In';btn.classList.add('is-counted');btn.disabled=true;
+    });
+  }
+  async function postForm(params){await fetch(SHEET_URL,{method:'POST',mode:'no-cors',body:params})}
+
+  document.querySelectorAll('[data-count-me-in]').forEach(btn=>{
+    btn.addEventListener('click',async()=>{
+      if(localStorage.getItem(COUNT_KEY)==='yes'){setCountedState();return}
+      localStorage.setItem(COUNT_KEY,'yes');
+      setCountedState();
+      const body=new URLSearchParams();
+      body.set('formType','Count Me In');
+      body.set('eventName',EVENT_NAME);
+      body.set('source','Count Me In Button');
+      body.set('page',location.href);
+      body.set('userAgent',navigator.userAgent);
+      try{await postForm(body)}catch(err){}
+      setTimeout(loadCount,900);
+    });
+  });
+
+  document.querySelectorAll('[data-share-event]').forEach(btn=>{
+    btn.addEventListener('click',async()=>{
+      const shareData={
+        title:'Western Sydney Winterfest',
+        text:'Western Sydney Winterfest, free entry, 25+ food vendors, rides, side games and live entertainment at Richmond Raceclub.',
+        url:location.href.split('#')[0]
+      };
+      if(navigator.share){
+        navigator.share(shareData).catch(()=>{});
+      }else{
+        try{
+          await navigator.clipboard.writeText(shareData.url);
+          const old=btn.textContent;btn.textContent='Copied';setTimeout(()=>btn.textContent=old,1600);
+        }catch(err){alert(shareData.url)}
+      }
+    });
+  });
+
+  if(profileForm){
+    profileForm.addEventListener('submit',async e=>{
+      e.preventDefault();
+      const btn=profileForm.querySelector('button[type="submit"]');
+      btn.disabled=true;btn.textContent='Sending...';profileMessage.textContent='';
+      const body=new URLSearchParams(new FormData(profileForm));
+      body.set('formType','Lead');
+      body.set('eventName',EVENT_NAME);
+      body.set('source','Homepage Profile Popup');
+      body.set('page',location.href);
+      body.set('userAgent',navigator.userAgent);
+      try{
+        await postForm(body);
+        profileMessage.textContent="You're locked in.";
+        btn.textContent='Locked In';
+        setTimeout(closeProfile,900);
+      }catch(err){
+        profileMessage.textContent='Something went wrong. Try again.';
+        btn.disabled=false;btn.textContent='Lock Me In';
+      }
+    });
+  }
+
+  if(localStorage.getItem(COUNT_KEY)==='yes')setCountedState();
+  loadCount();
+})();
+</script>
+
+<script>
+/* ===== Info / event / vendor modals ===== */
+(function(){
+  function openModal(id){
+    const modal=document.getElementById(id);
+    if(!modal)return;
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden','false');
+    document.body.style.overflow='hidden';
+  }
+  function closeModal(modal){
+    if(!modal)return;
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden','true');
+    document.body.style.overflow='';
+  }
+  document.addEventListener('click',function(e){
+    if(e.target.closest('[data-open-event]')){e.preventDefault();openModal('winterfest-modal');return}
+    if(e.target.closest('[data-open-vendors]')){e.preventDefault();openModal('vendor-modal');return}
+    const infoTrigger=e.target.closest('[data-open-info]');
+    if(infoTrigger){e.preventDefault();openModal(infoTrigger.getAttribute('data-open-info'));return}
+    if(e.target.closest('[data-close-modal]')){closeModal(e.target.closest('.bm-modal'));return}
+    if(e.target.classList&&e.target.classList.contains('bm-modal')){closeModal(e.target)}
+  });
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'){document.querySelectorAll('.bm-modal.open').forEach(closeModal)}
+  });
+})();
+</script>
+
+<script>
+/* ===== Mobile menu — one listener, no animation stacking ===== */
+(function(){
+  const body=document.body;
+  const toggle=document.querySelector('.nav-toggle');
+  const backdrop=document.querySelector('.nav-backdrop');
+  const closeButtons=document.querySelectorAll('[data-close-menu]');
+  const links=document.querySelectorAll('.nav-links a');
+
+  function closeMenu(){
+    body.classList.remove('menu-open');
+    if(toggle)toggle.setAttribute('aria-expanded','false');
+  }
+  function openMenu(){
+    body.classList.add('menu-open');
+    if(toggle)toggle.setAttribute('aria-expanded','true');
+  }
+  if(toggle){
+    toggle.addEventListener('click',function(){
+      body.classList.contains('menu-open') ? closeMenu() : openMenu();
+    });
+  }
+  if(backdrop)backdrop.addEventListener('click',closeMenu);
+  closeButtons.forEach(btn=>btn.addEventListener('click',closeMenu));
+  links.forEach(link=>link.addEventListener('click',closeMenu));
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu()});
+})();
+</script>
+
+<script>
+/* ===== TikTok feed loader (Netlify function with static fallback) ===== */
+(function(){
+  const feed=document.querySelector('[data-tiktok-feed]');
+  if(!feed)return;
+  const profileUrl='https://www.tiktok.com/@bossman_experiences';
+  const fallbackVideos=['7643752323801550098','7651807819372563719','7651545134135348481','7650060980386303240','7649689679624670471','7649318808133438738'];
+
+  function videoCard(video){
+    const id=typeof video==='string'?video:video.id;
+    const url=typeof video==='string'?`${profileUrl}/video/${id}`:(video.url||`${profileUrl}/video/${id}`);
+    return `<div class="tiktok-embed-card"><iframe src="https://www.tiktok.com/embed/v2/${id}" title="Bossman TikTok ${id}" loading="lazy" allow="encrypted-media; fullscreen; picture-in-picture" allowfullscreen></iframe><a href="${url}" target="_blank" rel="noopener">Open TikTok</a></div>`;
+  }
+  function render(videos,source){
+    const clean=(videos||[]).filter(v=>(typeof v==='string'?v:v&&v.id)).slice(0,8);
+    const cards=clean.map(videoCard).join('');
+    const more=`<a class="tiktok-see-more-card" href="${profileUrl}" target="_blank" rel="noopener"><strong>See more on TikTok</strong><span>${source==='live'?'Latest videos loaded from the profile':'Fallback feed shown, tap through for the newest posts'}</span><em>Open @bossman_experiences</em></a>`;
+    feed.innerHTML=cards+more;
+  }
+  async function loadTikToks(){
+    try{
+      const res=await fetch('/.netlify/functions/tiktok-feed',{cache:'no-store'});
+      if(!res.ok)throw new Error('TikTok feed unavailable');
+      const data=await res.json();
+      if(!data||!Array.isArray(data.videos)||data.videos.length===0)throw new Error('No TikTok videos returned');
+      render(data.videos,data.source||'live');
+    }catch(err){
+      render(fallbackVideos,'fallback');
+    }
+  }
+  loadTikToks();
+})();
+</script>
+
+
+<script>
+/* ===== Event countdown, Sydney time ===== */
+(function(){
+  const root=document.querySelector('[data-event-countdown]');
+  if(!root)return;
+  const target=new Date('2026-07-31T17:00:00+10:00').getTime();
+  const els={
+    days:root.querySelector('[data-days]'),
+    hours:root.querySelector('[data-hours]'),
+    minutes:root.querySelector('[data-minutes]'),
+    seconds:root.querySelector('[data-seconds]')
+  };
+  function pad(value){return String(value).padStart(2,'0')}
+  function render(){
+    const diff=Math.max(0,target-Date.now());
+    const days=Math.floor(diff/86400000);
+    const hours=Math.floor((diff%86400000)/3600000);
+    const minutes=Math.floor((diff%3600000)/60000);
+    const seconds=Math.floor((diff%60000)/1000);
+    els.days.textContent=pad(days);els.hours.textContent=pad(hours);els.minutes.textContent=pad(minutes);els.seconds.textContent=pad(seconds);
+    if(diff===0){root.closest('.countdown-wrap').querySelector('h2').innerHTML='Winterfest is <span>happening now.</span>';}
+  }
+  render();setInterval(render,1000);
+})();
+</script>
+
+
+<script>
+/* ===== Adaptive flyer sizing =====
+   Swap event-flyer.jpeg with any portrait, square or landscape flyer.
+   The hero card automatically reads its real dimensions and updates the layout. */
+(function(){
+  const flyer=document.querySelector('.poster-main img');
+  const card=document.querySelector('.poster-main');
+  if(!flyer||!card)return;
+  function fitFlyer(){
+    if(!flyer.naturalWidth||!flyer.naturalHeight)return;
+    card.style.setProperty('--flyer-ratio',`${flyer.naturalWidth} / ${flyer.naturalHeight}`);
+    card.classList.toggle('is-landscape',flyer.naturalWidth>flyer.naturalHeight);
+    card.classList.toggle('is-square',Math.abs(flyer.naturalWidth-flyer.naturalHeight)<20);
+  }
+  flyer.complete?fitFlyer():flyer.addEventListener('load',fitFlyer,{once:true});
+})();
+</script>
+
+</body>
+</html>
